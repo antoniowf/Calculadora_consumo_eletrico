@@ -2,7 +2,7 @@
 
 # Calculadora de consumo elétrico inteligente
 
-![Logo](Images\logo.png)
+![Logo](projetos\consumo-energia\Images\logo.png)
 
 </div>
 
