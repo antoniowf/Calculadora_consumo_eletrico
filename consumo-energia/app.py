@@ -1,6 +1,36 @@
-# TODO: Pedir o nome do aparelho
-# TODO: Pedir a otência do aparelho em watts (W) 
-# TODO: Pedir o tempo médio de uso diário em horas
+# DONE: Pedir o nome do aparelho
+# DONE: Pedir a potência do aparelho em watts (W) 
+# DONE: Pedir o tempo médio de uso diário em horas
 # TODO: Calcular o consumo mensal em kWh, usando a formula consumoMensal = (potencia * horasDia * 30) / 1000
 # TODO: Mostrar na tela o resultado formatado
 
+from rich import print
+from rich.panel import Panel
+
+class ConsumoEnergia:
+    """
+    A classe permite calcular o consumo mensal estimado (em kWh) e o impacto financeiro aproximado gerado por qualquer aparelho eletrodoméstico ou equipamento eletrônico, a partir de dados básicos de entrada.
+    """
+
+    def __init__(self, aparelho=None, consumo_horas=None, potencia=None):
+        self.aparelho = input("Digite o nome do aparelho: ")
+        self.consumo_horas = float(input("Digite o tempo médio de uso diário em horas: "))
+        self.potencia = float(input("Digite a potência do aparelho em watts (W): "))
+        self.consumo_mensal = 0
+        self.preco_kwh = 0.75
+
+    def calcular_mensal(self):
+        self.consumo_mensal = (self.potencia * self.consumo_horas * 30) / 1000
+        self.preco_kwh *= self.consumo_mensal
+
+
+    def mostrar_resultado(self):
+        print(f"Aparelho: {self.aparelho}")
+        print(f"Potência nominal: {self.potencia:.2f}W")
+        print(f"Consumo mensal: {self.consumo_mensal:.2f}KWh/mês")
+        print(f"Custo estimado: R$ar{self.preco_kwh:.2f}")
+        
+
+eletro1 = ConsumoEnergia()
+eletro1.calcular_mensal()
+eletro1.mostrar_resultado()
