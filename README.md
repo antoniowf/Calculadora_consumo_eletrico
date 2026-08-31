@@ -2,7 +2,7 @@
 
 # Calculadora de consumo elétrico inteligente
 
-![Logo](/projetos\logo.png)
+![Logo](/projetos/consumo-energia/Images/logo.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Mostre na tela o resultado formatado, por exemplo:
 
 ## Screenshot
 
-![App Screenshot](https://dummyimage.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](/projetos/consumo-energia/Images/Captura%20de%20tela%202026-08-31%20112452.png)
 
 </div>
 
