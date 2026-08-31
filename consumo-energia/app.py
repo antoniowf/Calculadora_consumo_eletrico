@@ -5,7 +5,6 @@
 # DONE: Mostrar na tela o resultado formatado
 
 from rich import print
-from rich.panel import Panel
 
 class ConsumoEnergia:
     """
@@ -33,3 +32,14 @@ class ConsumoEnergia:
 eletro1 = ConsumoEnergia()
 eletro1.calcular_mensal()
 eletro1.mostrar_resultado()
+print("---------------------------------------------------------------------------------")
+
+while continuar := input("Deseja calcular o consumo de energia de outro aparelho? (s/n): ").lower() == 's':
+    print("---------------------------------------------------------------------------------")
+    eletro2 = ConsumoEnergia()
+    eletro2.calcular_mensal()
+    eletro2.mostrar_resultado()
+
+if not continuar:
+    print("---------------------------------------------------------------------------------")
+    print("[bold blue on white]Obrigado! Lembre-se de economizar energia sempre![/]")
